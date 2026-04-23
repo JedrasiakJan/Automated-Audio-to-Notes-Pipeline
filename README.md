@@ -18,8 +18,7 @@
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
   <img src="https://img.shields.io/badge/SQLite3_(WAL)-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
   <img src="https://img.shields.io/badge/JSON_FHIR-000000?style=for-the-badge&logo=json&logoColor=white" alt="JSON" />
-  <img src="https://img.shields.io/badge/Fuzzy_Matching-FF9900?style=for-the-badge&logo=python&logoColor=white" alt="TheFuzz" />
-</p>
+  <img src="https://img.shields.io/badge/Fuzzy_Matching-TheFuzz-FF9900?style=for-the-badge&logo=python&logoColor=white" alt="TheFuzz" />
 
 **AI Models & Inference Engine**
 <p align="left">
