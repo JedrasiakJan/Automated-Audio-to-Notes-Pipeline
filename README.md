@@ -20,6 +20,7 @@
   <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
   <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white" alt="JSON" />
   <img src="https://img.shields.io/badge/TheFuzz-FF9900?style=for-the-badge" alt="TheFuzz" />
+</p>
 
 **AI Models & Inference Engine**
 <p align="left">
