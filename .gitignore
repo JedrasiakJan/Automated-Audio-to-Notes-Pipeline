@@ -1,0 +1,43 @@
+# secrets
+.env
+.htpasswd
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# logs
+*.log
+app.log
+
+# environments
+venv/
+.venv/
+
+# streamlit
+.streamlit/
+
+# temp / runtime
+temp/
+temp_file
+output/
+*.tmp
+*.wav
+*.mp3
+*.m4a
+*.mp4
+
+# OS
+.DS_Store
+Thumbs.db
+
+# local binaries
+ffmpeg.exe
+ffmpeg/
+
+
+Rejestr_Produktow_Leczniczych_calosciowy_stan_na_dzien_20260407.csv

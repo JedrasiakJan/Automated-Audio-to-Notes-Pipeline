@@ -1,0 +1,7 @@
+streamlit
+openai
+faster-whisper
+st-copy-to-clipboard
+thefuzz
+python-Levenshtein
+faster-whisper-server
