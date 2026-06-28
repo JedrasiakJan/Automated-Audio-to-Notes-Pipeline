@@ -1,26 +1,27 @@
-version: '3.8'
 services:
-  # TWOJA APLIKACJA AI
   medical-ai:
     build: .
     container_name: medical_assistant
     restart: always
+    env_file:
+      - .env
+    environment:
+      - TZ=Europe/Warsaw
+    volumes:
+      - ./Historia_wizyt.db:/app/Historia_wizyt.db
     deploy:
       resources:
         limits:
           memory: 8gb 
-          # Pkt 4: Limit RAM
-    # Nie wystawiamy portu 8501 na zewnątrz - Nginx go zasłoni!
 
-  # STRAŻNIK (NGINX)
   nginx:
     image: nginx:latest
     container_name: nginx_gate
     ports:
-      - "80:80" # Lekarz wchodzi przez http://IP.SERWERA
+      - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./.htpasswd:/etc/nginx/.htpasswd:ro # Plik z hasłem
+      - ./.htpasswd:/etc/nginx/.htpasswd:ro
     depends_on:
       - medical-ai
     restart: always

@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+.env
+Historia_wizyt.db
+ffmpeg.exe
+temp_file/

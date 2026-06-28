@@ -1,8 +1,6 @@
 import gc
 import threading
 import time
-
-import torch
 from openai import OpenAI
 
 from core.config import LM_STUDIO_URL
@@ -14,6 +12,12 @@ def get_client() -> OpenAI:
 
 def clear_vram() -> None:
     gc.collect()
+
+    try:
+        import torch
+    except ImportError:
+        return
+
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 

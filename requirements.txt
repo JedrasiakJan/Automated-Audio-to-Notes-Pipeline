@@ -1,7 +1,9 @@
-streamlit
-openai
-faster-whisper
-st-copy-to-clipboard
-thefuzz
-python-Levenshtein
-faster-whisper-server
+streamlit==1.56.0
+requests==2.33.1
+bcrypt==5.0.0
+python-dotenv==1.2.2
+st-copy-to-clipboard==0.1.6
+openai==2.30.0
+# Poniższe potrzebujesz do walidacji medycznej (thefuzz / RapidFuzz)
+thefuzz==0.22.1
+RapidFuzz==3.14.5
