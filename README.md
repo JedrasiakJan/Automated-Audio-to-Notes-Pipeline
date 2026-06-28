@@ -1,6 +1,5 @@
 # Automated Audio-to-Notes Pipeline 🎙️📝
 
-> ⚠️ **Note:** The core logic and Python source code are currently kept in a private, closed-source repository due to upcoming commercialization. This repository serves as an architectural overview and technical showcase of my AI-native engineering capabilities.
 
 ### 🛠️ Tech Stack & Infrastructure
 
@@ -156,6 +155,53 @@ To ensure the application is portable, scalable, and isolated from the host oper
 *   **Double Authentication Layer:** Before a user even reaches the Streamlit application's internal login screen, Nginx enforces an HTTP Basic Authentication (`.htpasswd`) wall, providing an additional layer of security against unauthorized access or scanning bots.
 *   **Resource Throttling:** Hardware resource limits are explicitly defined in `docker-compose.yml` (e.g., `memory: 8gb`), preventing the AI assistant container from monopolizing host system memory.
 
+### 🚀 Quick Start / Jak uruchomić projekt (ikona na pulpicie)
+
+Aplikacja została zaprojektowana tak, aby rekruter lub użytkownik końcowy mógł uruchomić cały system — zarówno backend transkrypcyjny Whisper, jak i interfejs Streamlit — **jednym kliknięciem bezpośrednio z pulpitu systemu Windows**, bez ręcznego wpisywania komend w terminalu.
+
+## 1. Klonowanie repozytorium
+
+Aby skrypt startowy `.bat` automatycznie odnalazł projekt, repozytorium należy sklonować bezpośrednio na **Pulpit Windows** do folderu o nazwie `Projekt whisper`:
+
+```bash
+cd %USERPROFILE%\Desktop
+git clone https://github.com/JedrasiakJan/Automated-Audio-to-Notes-Pipeline "Projekt whisper"
+```
+
+## 2. Przygotowanie środowiska i zależności
+
+```bash
+cd "Projekt whisper"
+python -m venv venv
+call venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## 3. Wymagania wstępne
+
+- **LM Studio** uruchomione z modelem LLM (np. Qwen) na porcie `1234`
+- **FFmpeg** zainstalowany i dodany do `PATH`
+- Plik **`.env`** w głównym katalogu projektu
+
+## 4. Wyciągnięcie ikony startowej na pulpit
+
+1. Otwórz folder `Projekt whisper` na pulpicie.
+2. Znajdź plik `SafeMed_Launcher.bat`.
+3. Wytnij (`Ctrl + X`) i wklej na pulpit (`Ctrl + V`).
+
+## 5. Uruchomienie systemu
+
+Kliknij dwukrotnie `SafeMed_Launcher.bat`. Skrypt automatycznie:
+
+- użyje zmiennych środowiskowych Windows,
+- przejdzie do folderu projektu,
+- aktywuje `venv`,
+- uruchomi `run_all.py`.
+
+## 6. Zamykanie aplikacji
+
+- Zamknij okno terminala, lub
+- Naciśnij `Ctrl + C` w konsoli.
 
 
 ## 🏁 Summary
